@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#
+# install the Marin Publisher Mangement scripts to the system and make them available on the user path
+#
+
+# check for existing directory
+if [ -d ~/bin/tmScripts ]; then
+	# remove directory
+	rm -r ~/bin/tmScripts
+fi
+
+# add new directory
+mkdir -pv ~/bin/tmScripts
+
+# copy scripts
+cp scripts/* ~/bin/tmScripts
+
+echo "--------------------------------------------------"
+echo "Copied team Scripts to ~/bin/tmScripts"
+
+# check for path in .bash_profile
+if grep 'export PATH="~/bin/tmScripts:${PATH}"' ~/.bash_profile; then
+	echo ''
+else
+	# add path to .bash_profile and reload
+	echo 'export PATH="~/bin/tmScripts:${PATH}"' >> ~/.bash_profile
+	echo "Added path to team scripts to .bash_profile"
+	echo 
+	echo ACTION: run "source ~/.bash_profile", this will update your PATH
+fi
+
+echo
+echo "COMPLETE"

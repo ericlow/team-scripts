@@ -1,0 +1,17 @@
+#!/bin/bash
+###################################################################################
+# This script navigates the user to a url and opens the default browser
+# 
+# Usage:
+# 	execute this script from the command line
+# 	tm_open_page
+###################################################################################
+
+if [ "?" = "$1" ]; then
+	echo "tm_open_page : This script navigates the user to www.google.com"
+	echo "    Usage: execute this script from the command line"
+	echo "        tm_open_page"
+	exit 0
+fi
+
+open http://www.google.com

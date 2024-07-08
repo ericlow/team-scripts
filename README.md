@@ -4,9 +4,10 @@
 The naming scheme of scripts is important:
 ### Use dot notation 
 Give the user the sense they are working with objects.  Imagine running scripts with these names: 
-    * `remote.myservice.deploy`
-    * `remote.myservice.restart`
-    * `remote.myservice.runTests`
+
+* `remote.myservice.deploy`
+* `remote.myservice.restart`
+* `remote.myservice.runTests`
 ### No file extensions
 Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what executor to run.
 

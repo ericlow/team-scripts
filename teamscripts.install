@@ -1,33 +1,50 @@
 #!/bin/bash
 
 #
-# install the Marin Publisher Mangement scripts to the system and make them available on the user path
+# install the Team Scripts to the system and make them available on the user path
 #
 
 # check for existing directory
-if [ -d ~/bin/tmScripts ]; then
+if [ -d ~/bin/teamscripts ]; then
 	# remove directory
-	rm -r ~/bin/tmScripts
+	rm -r ~/bin/teamscripts
+	echo "--------------------------------------------------"
+	echo "Removed old copy of Team Scripts at ~/bin/teamscripts"
 fi
 
+echo "--------------------------------------------------"
+echo "Copy Team Scripts to ~/bin/teamscripts"
 # add new directory
-mkdir -pv ~/bin/tmScripts
+mkdir -p ~/bin/teamscripts
 
 # copy scripts
-cp scripts/* ~/bin/tmScripts
+cp -R scripts/* ~/bin/teamscripts
 
-echo "--------------------------------------------------"
-echo "Copied team Scripts to ~/bin/tmScripts"
 
+# add path to .bash_profile and .zshrc
+
+# bash
 # check for path in .bash_profile
-if grep 'export PATH="~/bin/tmScripts:${PATH}"' ~/.bash_profile; then
+if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.bash_profile; then
 	echo ''
 else
 	# add path to .bash_profile and reload
-	echo 'export PATH="~/bin/tmScripts:${PATH}"' >> ~/.bash_profile
+	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.bash_profile
 	echo "Added path to team scripts to .bash_profile"
 	echo 
 	echo ACTION: run "source ~/.bash_profile", this will update your PATH
+fi
+
+# zsh
+# add path to .zshrc
+if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.zshrc; then
+	echo ''
+else
+	# add path to .bash_profile and reload
+	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.zshrc
+	echo "Added path to team scripts to .zshrc"
+	echo 
+	echo ACTION: run "source ~/.zshrc", this will update your PATH
 fi
 
 echo

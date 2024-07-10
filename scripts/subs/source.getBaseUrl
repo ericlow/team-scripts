@@ -1,0 +1,39 @@
+#!/bin/bash
+###################################################################################
+# When executed within a directory containing a git repo, this script returns the 
+# repos homepage url to the caller
+# 
+# Usage:
+# 	subs/source.getBaseUrl
+# 	
+###################################################################################
+
+source_getBaseUrl() {
+    # Get the current directory's Git origin URL
+    origin_url=$(git config --get remote.origin.url)
+
+
+    # Check if the origin URL was retrieved
+    if [ -z "$origin_url" ]; then
+        echo "No origin URL found. Are you in a Git repository?"
+        exit 1
+    fi
+
+    # Convert SSH URL to HTTPS URL
+    if [[ $origin_url == git@* ]]; then
+        # Example: git@github.com:user/repo.git -> https://github.com/user/repo
+        https_url=$(echo "$origin_url" | sed -e 's/:/\//' -e 's/^git@/https:\/\//' -e 's/\.git$//')
+
+    elif [[ $origin_url == http* ]]; then
+        # Example: https://github.com/user/repo.git -> https://github.com/user/repo
+        https_url=$(echo "$origin_url" | sed -e 's/\.git$//')
+    else
+        echo "Unsupported URL format: $origin_url"
+        exit 1
+    fi
+
+    # Return the HTTPS URL to the caller
+    echo "$https_url"
+}
+
+source_getBaseUrl

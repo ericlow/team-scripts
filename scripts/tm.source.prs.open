@@ -1,0 +1,20 @@
+#!/bin/bash
+###################################################################################
+# This script navigates the user to the PR's page of a git repo
+# 
+# Usage:
+# 	execute this script from the command line
+# 	tm.source.prs.open
+###################################################################################
+
+if [ "?" = "$1" ]; then
+	echo "tm.source.prs.open : This script navigates the user to the repository's PR list"
+	echo "    Usage: execute this script from the command line"
+	echo "        tm.source.prs.open"
+	exit 0
+fi
+
+github_url=$(subs/source.getBaseUrl)
+github_url="$github_url/pulls"
+open $github_url
+

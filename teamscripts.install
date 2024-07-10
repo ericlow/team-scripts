@@ -29,6 +29,7 @@ if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.bash_profile; then
 	echo ''
 else
 	# add path to .bash_profile and reload
+	echo 
 	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.bash_profile
 	echo "Added path to team scripts to .bash_profile"
 	echo 
@@ -41,6 +42,7 @@ if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.zshrc; then
 	echo ''
 else
 	# add path to .bash_profile and reload
+	echo 
 	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.zshrc
 	echo "Added path to team scripts to .zshrc"
 	echo 

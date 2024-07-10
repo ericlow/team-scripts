@@ -14,7 +14,11 @@ if [ "?" = "$1" ]; then
 	exit 0
 fi
 
-github_url=$(subs/source.getBaseUrl)
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source $DIR/subs/source.getBaseUrl
+github_url=$(source_getBaseUrl)
+
 github_url="$github_url/pulls"
+
 open $github_url
 

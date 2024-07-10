@@ -24,3 +24,20 @@ Script names should not give away their implementations.  Instead, the scripts s
   * Menus: http://adamlamers.com/post/FTPD9KNRA8CT
   * Cross Platform open urls: https://stackoverflow.com/questions/3124556/clean-way-to-launch-the-web-browser-from-shell-script
   * investigate: https://github.com/junegunn/fzf
+  * Migrate: get git branch
+  * Migrate: get git org
+  * Migrate: get git repo
+  * Migrate: get user email
+  * Migrate: run remote mysql script
+  * Migrate: run a jenkins job with parameters
+  * Migrate: run a jenkins job without parameters
+  * Migrate: run a python script
+  * Migrate: parse command line arguments
+  * Migrate: curl with POST, PUT with headers, data payloads
+  * Migrate: ssh to machine, manipulate files with sed
+  * Migrate: mount NFS drives
+  * Migrate: ssh to machine, cat a file
+  * Migrate: manipulate files locally with sed
+  * Migrate: deploy script package remotely
+  * Migrate: create a PR 
+  * Migrate: simplify navigation to remote logs

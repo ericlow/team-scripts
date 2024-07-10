@@ -18,7 +18,12 @@ Script names should not give away their implementations.  Instead, the scripts s
   git clone git@github.com:ericlow/team-scripts.git
   cd team-scripts
   ./teamscripts.install
+  source ~/.zshrc
+  tm.source.open
 ```
+
+
+
 
 # TODO: 
   * Menus: http://adamlamers.com/post/FTPD9KNRA8CT

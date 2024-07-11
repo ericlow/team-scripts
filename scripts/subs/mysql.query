@@ -1,0 +1,12 @@
+#!/bin/bash
+###################################################################################
+# This job cancels jobs that prevent new jobs from being handled
+# Usage: 
+#    ms_func_clients_jobs_cancelStuck <env> <client id>
+# Ex: 
+#    ms_func_clients_jobs_cancelStuck searchfunc09 56201
+#
+###################################################################################
+
+
+mysql -u $DB_USER -p$DB_PASSWORD -h $DB_HOST $DB_SCHEMA -e "$1"

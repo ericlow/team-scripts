@@ -12,9 +12,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 source $DIR/subs/template.function.args
 source $DIR/subs/template.function.noarg
 
-#returnVal=$(template_function_noarg)
-#echo "$returnVal!!!" 
-
+returnVal=$(template_function_noarg)
+echo "$returnVal!!!" 
 
 returnVal=$(template_function_args 3 'inside template.function.noarg')
 echo "$returnVal!!!" 

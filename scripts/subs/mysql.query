@@ -1,14 +1,40 @@
 #!/bin/bash
 ###################################################################################
-# This job cancels jobs that prevent new jobs from being handled
+# This script executes a mysql command
 #
-# Install mysql client via: brew install mysql-client
 # Usage: 
-#    ms_func_clients_jobs_cancelStuck <env> <client id>
-# Ex: 
-#    ms_func_clients_jobs_cancelStuck searchfunc09 56201
+#    Install mysql client via: `brew install mysql-client`
+#
+#   Define the directory where subs are located
+#   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+#
+#   # source the script
+#   source $DIR/subs/mysql.query
+#
+#   # call the function, store the return value
+#.  returnVal=$(template_function_args username password host schema query)
 #
 ###################################################################################
 
 
-mysql -u $DB_USER -p$DB_PASSWORD -h $DB_HOST $DB_SCHEMA -e "$1"
+function_mysql_query() {
+	DB_USER="$1"
+	DB_PASSWORD="$2"
+	DB_HOST="$3"
+	DB_SCHEMA="$4"
+	DB_QUERY="$5"
+
+	mysql -u $DB_USER -p$DB_PASSWORD -h $DB_HOST $DB_SCHEMA -e "$DB_QUERY"
+
+}
+
+# Main execution
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    # Script is being run directly
+    result=$(function_mysql_query "$1" "$2" "$3" "$4" "$5")
+    echo "$result"
+else
+    # Script is being sourced
+    # Do nothing, allow the function to be called externally
+    :
+fi

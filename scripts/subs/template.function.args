@@ -2,7 +2,16 @@
 ###################################################################################
 #
 # Usage:
+#   # Define the directory where subs are located
+#   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #
+#   # source the script
+#   source $DIR/subs/template.function.args
+#
+#   # call the function, store the return value
+#.  returnVal=$(template_function_args)
+#
+#.  echo "$returnVal!!!"
 ###################################################################################
 
 template_function_args() {

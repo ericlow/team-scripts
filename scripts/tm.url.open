@@ -1,6 +1,6 @@
 #!/bin/bash
 ###################################################################################
-# This script navigates the user to a url and opens the default browser
+# This script opens the default browser for a url
 # 
 # Usage:
 # 	execute this script from the command line

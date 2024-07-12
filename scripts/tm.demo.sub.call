@@ -16,4 +16,4 @@ returnVal=$(template_function_noarg)
 echo "$returnVal!!!" 
 
 returnVal=$(template_function_args 3 'inside template.function.noarg')
-echo "$returnVal!!!" 
+echo "$returnVal" 

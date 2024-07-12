@@ -1,8 +1,18 @@
 #!/bin/bash
 ###################################################################################
+# Demonstrates how to create a reusable function to be called by other functions.
 #
 # Usage:
+#   # Define the directory where subs are located
+#   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #
+#   # source the script
+#   source $DIR/subs/template.function.noarg
+#
+#   # call the function, store the return value
+#.  returnVal=$(template_function_noarg arg1 arg2)
+#
+#.  echo "$returnVal!!!"
 ###################################################################################
 
 template_function_noarg() {

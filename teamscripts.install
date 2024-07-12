@@ -38,12 +38,12 @@ fi
 
 # zsh
 # add path to .zshrc
-if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.zshrc; then
+if grep 'export PATH="$HOME/bin/teamscripts:${PATH}"' ~/.zshrc; then
 	echo ''
 else
-	# add path to .bash_profile and reload
+	# add path to .zshrc  and reload
 	echo 
-	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.zshrc
+	echo 'export PATH="$HOME/bin/teamscripts:${PATH}"' >> ~/.zshrc
 	echo "Added path to team scripts to .zshrc"
 	echo 
 	echo ACTION: run "source ~/.zshrc", this will update your PATH

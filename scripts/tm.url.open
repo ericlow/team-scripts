@@ -4,14 +4,15 @@
 # 
 # Usage:
 # 	execute this script from the command line
-# 	tm_open_page
+# 	tm.url.open
 ###################################################################################
 
 if [ "?" = "$1" ]; then
-	echo "tm_open_page : This script navigates the user to www.google.com"
+	echo "tm.url.open : This script navigates the user to www.google.com"
 	echo "    Usage: execute this script from the command line"
-	echo "        tm_open_page"
+	echo "        tm.url.open"
 	exit 0
 fi
 
+# open a url in your browser
 open http://www.google.com

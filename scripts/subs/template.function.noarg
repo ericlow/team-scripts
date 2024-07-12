@@ -1,0 +1,24 @@
+#!/bin/bash
+###################################################################################
+#
+# Usage:
+#
+###################################################################################
+
+template_function_noarg() {
+	#return a value from our script
+	local val='hello world'
+    echo "$val"
+}
+
+
+# Main execution
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    # Script is being run directly
+    result=$(template_function_noarg)
+    echo "$result"
+else
+    # Script is being sourced
+    # Do nothing, allow the function to be called externally
+    :
+fi

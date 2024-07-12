@@ -1,6 +1,8 @@
 #!/bin/bash
 ###################################################################################
 # This job cancels jobs that prevent new jobs from being handled
+#
+# Install mysql client via: brew install mysql-client
 # Usage: 
 #    ms_func_clients_jobs_cancelStuck <env> <client id>
 # Ex: 

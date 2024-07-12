@@ -36,4 +36,15 @@ source_getBaseUrl() {
     echo "$https_url"
 }
 
-source_getBaseUrl
+
+
+# Main execution
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    # Script is being run directly
+    result=$(source_getBaseUrl)
+    echo "$result"
+else
+    # Script is being sourced
+    # Do nothing, allow the function to be called externally
+    :
+fi

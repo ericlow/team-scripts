@@ -3,8 +3,8 @@
 # This script executes a mysql command
 #
 # Usage: 
-#    Install mysql client via: `brew install mysql-client`
-#
+#   Install mysql client via: `brew install mysql-client`
+#.  run this to put `mysql`` on your path: echo 'export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"' >> ~/.zshrc
 #   Define the directory where subs are located
 #   DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #

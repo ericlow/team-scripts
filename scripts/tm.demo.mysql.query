@@ -1,0 +1,23 @@
+#!/bin/bash
+###################################################################################
+# Demonstrates how to run a sql command from a script
+# 
+# Usage:
+# 	execute this script from the command line
+# 	tm.demo.mysql.query
+###################################################################################
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source $DIR/subs/mysql.query
+
+# retrieve username and password from environment variables, defined in .zshrc or .bash_profile
+DB_USER=$MYSQL_USER
+DB_PASSWORD=$MYSQL_PASSWORD
+
+# hard code these within the script
+DB_HOST="$1"
+DB_SCHEMA="$2"
+DB_QUERY="$3"
+
+returnVal=$(function_mysql_query $DB_USER $DB_PASSWORD $DB_HOST $DB_SCHEMA "$DB_QUERY")
+echo "$returnVal!!!" 

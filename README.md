@@ -5,6 +5,7 @@ The naming scheme of scripts is important:
 
 ### Use dot notation 
 Give the user the sense they are working with objects.  Imagine running scripts with these names: 
+
     * `remote.myservice.deploy`
     * `remote.myservice.restart`
     * `remote.myservice.runTests`

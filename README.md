@@ -23,7 +23,7 @@ Give the user the sense they are working with objects.  Imagine running scripts 
 * `tm.remote.myservice.runTests`
 
 ### No file extensions
-Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what executor to run.
+Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what interpreter to run.
 
 # Quickstart
 

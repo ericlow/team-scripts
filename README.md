@@ -41,7 +41,8 @@ Script names should not give away their implementations.  Instead, the scripts s
   tm.source.open ?
 ```
 
-
+# Issues
+tab doesn't autocomplete the name of the scripts.  Don't know why.
 
 # TODO: 
   * Menus: http://adamlamers.com/post/FTPD9KNRA8CT

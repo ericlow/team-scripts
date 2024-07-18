@@ -28,15 +28,18 @@ Give the user the sense they are working with objects.  Imagine running scripts 
 Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what interpreter to run.
 
 # Quickstart
-
+## Install
 ```
   git clone git@github.com:ericlow/team-scripts.git
   cd team-scripts
   ./teamscripts.install
   source ~/.zshrc
-  tm.source.open
 ```
-
+## Try it
+```
+  tm.source.open
+  tm.source.open ?
+```
 
 
 

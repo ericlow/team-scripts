@@ -11,16 +11,16 @@ The naming scheme of scripts is important:
 
 ### The first two or three characters indicates the team or namespace.
 
-    * `fe.myservice.link` - frontend team, link the service
-    * `bid.pipeline.clean` - bidding team, clean the pipeline of leftover jobs
-    * `ec.remote.client.pair` - ecommerce team, pair clients on remote system 
+* `fe.myservice.link` - frontend team, link the service
+* `bid.pipeline.clean` - bidding team, clean the pipeline of leftover jobs
+* `ec.remote.client.pair` - ecommerce team, pair clients on remote system 
 
 ### Use dot notation 
 Give the user the sense they are working with objects.  Imagine running scripts with these names: 
 
-    * `tm.remote.myservice.deploy`
-    * `tm.remote.myservice.restart`
-    * `tm.remote.myservice.runTests`
+* `tm.remote.myservice.deploy`
+* `tm.remote.myservice.restart`
+* `tm.remote.myservice.runTests`
 
 ### No file extensions
 Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what executor to run.

@@ -3,6 +3,8 @@
 
 You can run the scripts from anywhere on the command line, because the install scripts writes the location of the scripts to your PATH.
 
+The terminal's tab complete will write out or list the available commands
+
 The scripts are organized by namespace / team.
 
 The name of the scripts does not give away the implementation.

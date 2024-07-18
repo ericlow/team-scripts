@@ -3,6 +3,8 @@
 
 You can run the scripts from anywhere on the command line, because the install scripts writes the location of the scripts to your PATH.
 
+The terminal's tab complete will write out or list the available commands
+
 The scripts are organized by namespace / team.
 
 The name of the scripts does not give away the implementation.
@@ -26,17 +28,21 @@ Give the user the sense they are working with objects.  Imagine running scripts 
 Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what interpreter to run.
 
 # Quickstart
-
+## Install
 ```
   git clone git@github.com:ericlow/team-scripts.git
   cd team-scripts
   ./teamscripts.install
   source ~/.zshrc
+```
+## Try it
+```
   tm.source.open
+  tm.source.open ?
 ```
 
-
-
+# Issues
+tab doesn't autocomplete the name of the scripts.  Don't know why.
 
 # TODO: 
   * Menus: http://adamlamers.com/post/FTPD9KNRA8CT

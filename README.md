@@ -1,16 +1,29 @@
 # Team Scripts
 `Team Scripts` addresses the problem that many teams have, that sharing scripts can be problematic, from issues with moving bulk groups of scripts, to keeping them organized.
 
+You can run the scripts from anywhere on the command line, because the install scripts writes the location of the scripts to your PATH.
+
+The scripts are organized by namespace / team.
+
+The name of the scripts does not give away the implementation.
+
 The naming scheme of scripts is important:
+
+### The first two or three characters indicates the team or namespace.
+
+* `fe.myservice.link` - frontend team, link the service
+* `bid.pipeline.clean` - bidding team, clean the pipeline of leftover jobs
+* `ec.remote.client.pair` - ecommerce team, pair clients on remote system 
 
 ### Use dot notation 
 Give the user the sense they are working with objects.  Imagine running scripts with these names: 
-    * `remote.myservice.deploy`
-    * `remote.myservice.restart`
-    * `remote.myservice.runTests`
+
+* `tm.remote.myservice.deploy`
+* `tm.remote.myservice.restart`
+* `tm.remote.myservice.runTests`
 
 ### No file extensions
-Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what executor to run.
+Script names should not give away their implementations.  Instead, the scripts should use the shebang to hint to the OS what interpreter to run.
 
 # Quickstart
 

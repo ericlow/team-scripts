@@ -1,0 +1,51 @@
+#!/bin/bash
+###################################################################################
+#
+# install team scripts to a remote host and make them available on the user path
+#
+# Goal 1: On a remote host modify .bash_profile to include the following 2 lines
+#     # team-scripts
+#     source ~/msearchScripts/bootstrap.sh
+#
+# Goal 2: On a remote host, create ~/bin/teamscripts
+#
+# Goal 3: On a remote host, upload a file: 
+#  from workstation: 		remote.scripts/bootstrap.sh
+#  to remote host: 	~/teamscripts/bootstrap.sh
+# 
+###################################################################################
+
+# Remote Host Installation
+HOST=labs-admin-lv-102
+
+# Get a USER to ssh to host
+## first try getting it from git settings
+## next try getting it from environment settings
+EMAIL=$(git config user.email)
+USER=$(echo $EMAIL | awk -F\@ '{print $1}')
+
+# if LDAP_NAME is defined, use that as username
+if [[ ! -z "${LDAP_NAME}" ]]; then
+	USER=$LDAP_NAME
+fi
+
+echo "----------------------- $HOST scripts ---------------------------"
+echo "-------------------Executing script as user $USER-------------------"
+
+echo check for existing directory
+exists=$( ssh $USER@$HOST "cat ~/.bash_profile | grep \"# team-scripts\" | wc -l " )
+if [[ "${exists}" -eq "0" ]]; then
+	echo "modifying .bash_profile"; 
+	ssh $USER@$HOST "echo \"# team-scripts\" >> ~/.bash_profile"
+	ssh $USER@$HOST "echo \"source ~/teamscripts/bootstrap.sh\" >> ~/.bash_profile"
+fi
+
+echo remove the remote script copies
+ssh $USER@$HOST 'rm -rf ~/teamscripts && mkdir ~/teamscripts'
+
+echo redeploy the remote script copies
+scp remote.scripts/* $USER@$HOST:~/teamscripts
+
+echo
+echo "COMPLETE"
+

@@ -25,12 +25,12 @@ cp -R scripts/* ~/bin/teamscripts
 
 # bash
 # check for path in .bash_profile
-if grep 'export PATH="~/bin/teamscripts:${PATH}"' ~/.bash_profile; then
+if grep 'export PATH="$HOME/bin/teamscripts:${PATH}"' ~/.bash_profile; then
 	echo ''
 else
 	# add path to .bash_profile and reload
 	echo 
-	echo 'export PATH="~/bin/teamscripts:${PATH}"' >> ~/.bash_profile
+	echo 'export PATH="$HOME/bin/teamscripts:${PATH}"' >> ~/.bash_profile
 	echo "Added path to team scripts to .bash_profile"
 	echo 
 	echo ACTION: run "source ~/.bash_profile", this will update your PATH

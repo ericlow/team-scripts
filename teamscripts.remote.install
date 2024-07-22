@@ -15,18 +15,17 @@
 # 
 ###################################################################################
 
-# Remote Host Installation
-HOST=labs-admin-lv-102
+# Define connection values here or get it from an env variable
+HOST=$REMOTE_HOST
+USER=''
 
-# Get a USER to ssh to host
-## first try getting it from git settings
-## next try getting it from environment settings
-EMAIL=$(git config user.email)
-USER=$(echo $EMAIL | awk -F\@ '{print $1}')
-
-# if LDAP_NAME is defined, use that as username
-if [[ ! -z "${LDAP_NAME}" ]]; then
-	USER=$LDAP_NAME
+# if user is not set, try to infer the user from env or from git config
+if [ -z "$USER"]; then
+	USER=$REMOTE_USER
+	if [ -z "$USER"]; then
+		EMAIL=$(git config user.email)
+		USER=$(echo $EMAIL | awk -F\@ '{print $1}')
+	fi
 fi
 
 echo "----------------------- $HOST scripts ---------------------------"
@@ -48,4 +47,5 @@ scp remote.scripts/* $USER@$HOST:~/teamscripts
 
 echo
 echo "COMPLETE"
+
 

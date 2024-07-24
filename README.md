@@ -55,6 +55,7 @@ tab doesn't autocomplete the name of the scripts.  Don't know why.
   * Migrate: run remote mysql script
   * Migrate: run a jenkins job with parameters
   * Migrate: run a jenkins job without parameters
+  * Migrate: run a GOCD job
   * Migrate: run a python script
   * Migrate: parse command line arguments
   * Migrate: curl with POST, PUT with headers, data payloads

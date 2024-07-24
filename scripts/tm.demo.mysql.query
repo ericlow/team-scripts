@@ -7,6 +7,13 @@
 # 	tm.demo.mysql.query
 ###################################################################################
 
+if [ "?" = "$1" ]; then
+	echo "tm.demo.mysql.query : Demonstrates how to run a sql command from a script"
+	echo "    Usage: execute this script from the command line"
+	echo "        tm.demo.mysql.query"
+	exit 0
+fi
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 source $DIR/subs/mysql.query
 

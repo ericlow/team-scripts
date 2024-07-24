@@ -7,6 +7,12 @@
 # 	tm.demo.sub.call
 ###################################################################################
 
+if [ "?" = "$1" ]; then
+	echo "tm.demo.sub.call : Demonstrates how to call a function defined in sub"
+	echo "    Usage: execute this script from the command line"
+	echo "        tm.demo.sub.call"
+	exit 0
+fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 source $DIR/subs/template.function.args

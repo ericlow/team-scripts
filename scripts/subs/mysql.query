@@ -23,7 +23,6 @@ function_mysql_query() {
 	DB_HOST="$3"
 	DB_SCHEMA="$4"
 	DB_QUERY="$5"
-
 	mysql -u $DB_USER -p$DB_PASSWORD -h $DB_HOST $DB_SCHEMA -e "$DB_QUERY"
 
 }
@@ -31,6 +30,7 @@ function_mysql_query() {
 # Main execution
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     # Script is being run directly
+
     result=$(function_mysql_query "$1" "$2" "$3" "$4" "$5")
     echo "$result"
 else

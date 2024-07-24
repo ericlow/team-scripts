@@ -22,9 +22,9 @@ DB_USER=$MYSQL_USER
 DB_PASSWORD=$MYSQL_PASSWORD
 
 # hard code these within the script
-DB_HOST="$1"
-DB_SCHEMA="$2"
-DB_QUERY="$3"
+DB_HOST=$MYSQL_HOST
+DB_SCHEMA="mysql"
+DB_QUERY="SELECT 1"
 
 returnVal=$(function_mysql_query $DB_USER $DB_PASSWORD $DB_HOST $DB_SCHEMA "$DB_QUERY")
 echo "$returnVal!!!" 

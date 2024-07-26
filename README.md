@@ -1,13 +1,15 @@
 # Team Scripts
-`Team Scripts` addresses the problem that many teams have, that sharing scripts can be problematic, from issues with moving bulk groups of scripts, to keeping them organized.
+`Team Scripts` addresses the problem that many teams have: sharing knowledge, and discovering what's available.
 
+#### Convenience
 You can run the scripts from anywhere on the command line. The installation puts the scripts on the PATH.
 
+Scripts on remote hosts can be managed 
+
+#### Discoverability
 Tab complete lists the available commands
 
-The scripts are organized by namespace / team
-
-Scripts on remote hosts can be managed 
+The scripts are organized by namespace / team 
 
 The naming scheme of scripts is important:
 

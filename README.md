@@ -7,6 +7,8 @@ Tab complete lists the available commands
 
 The scripts are organized by namespace / team
 
+Scripts on remote hosts can be managed 
+
 The naming scheme of scripts is important:
 
 ### The first two or three characters indicates the team or namespace.

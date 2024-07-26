@@ -44,9 +44,7 @@ create an issue: https://github.com/ericlow/team-scripts/issues/new
 
 
 # TODO: 
-  * Menus: http://adamlamers.com/post/FTPD9KNRA8CT
-  * Cross Platform open urls: https://stackoverflow.com/questions/3124556/clean-way-to-launch-the-web-browser-from-shell-script
-  * investigate: https://github.com/junegunn/fzf
+  * "A command-line fuzzy finder": https://github.com/junegunn/fzf
   * Migrate: get git branch
   * Migrate: get git org
   * Migrate: get git repo

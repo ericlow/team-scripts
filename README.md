@@ -46,7 +46,7 @@ Script names should not give away their implementations.  Instead, the scripts s
 ```
 
 # Feedback
-create an issue: https://github.com/ericlow/team-scripts/issues/new
+[create an issue](https://github.com/ericlow/team-scripts/issues/new)
 
 
 # TODO: 

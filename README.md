@@ -1,5 +1,5 @@
 # Team Scripts
-`Team Scripts` addresses the problem that many teams have: sharing knowledge, and for individuals to discover what's available.
+`Team Scripts` addresses the problem that many teams have: sharing scripts (knowledge), and for individuals to discover what scripts are already available.
 
 #### Convenience
 You can run the scripts from anywhere on the command line. The installation puts the scripts on the PATH.

@@ -9,17 +9,19 @@ Scripts on remote hosts can be managed
 #### Discoverability
 Tab complete lists the available commands
 
-The scripts are organized by namespace / team 
+The scripts are organized by namespace / team / resource / action
 
-The naming scheme of scripts is important:
+### Naming Scheme
 
-### The first two or three characters indicates the team or namespace.
+The naming scheme of scripts is important for organization and discoverability:
+
+#### The first two or three characters indicates the team or namespace.
 
 * `fe.myservice.link` - frontend team, link the service
 * `bid.pipeline.clean` - bidding team, clean the pipeline of leftover jobs
 * `ec.remote.client.pair` - ecommerce team, pair clients on remote system 
 
-### Use dot notation 
+#### Use dot notation 
 Give the user the sense they are working with objects.  Imagine running scripts with these names: 
 
 * `tm.remote.myservice.deploy`

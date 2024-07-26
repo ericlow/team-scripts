@@ -15,19 +15,33 @@
 # 
 ###################################################################################
 
-# Define connection values here or get it from an env variable
+if [ "?" = "$1" ]; then
+	echo "teamscripts.remote.install : install team scripts to a remote host and make them available on the user path"
+	echo "    Prerequisites:"
+	echo "    	Required:"
+	echo "    		REMOTE_HOST: environment variable, value is the host to deploy scripts to"
+	echo "    	Optional:"
+	echo "    		REMOTE_USER: environment variable, value is the user to ssh to the host as"
+	echo "    Usage: execute this script from the command line"
+	echo "		  cd/team-scripts"
+	echo "        ./teamscripts.remote.install"
+	exit 0
+fi
+
+# Set connection values here or get it from an env variable
 HOST=$REMOTE_HOST
 USER=''
 
 # if user is not set, try to infer the user from env or from git config
-if [ -z "$USER"]; then
+if [ -z "$USER" ]; then
 	USER=$REMOTE_USER
-	if [ -z "$USER"]; then
+	if [ -z "$USER" ]; then
 		EMAIL=$(git config user.email)
 		USER=$(echo $EMAIL | awk -F\@ '{print $1}')
 	fi
 fi
 
+# Deploy the scripts to the host
 echo "----------------------- $HOST scripts ---------------------------"
 echo "-------------------Executing script as user $USER-------------------"
 
@@ -39,7 +53,7 @@ if [[ "${exists}" -eq "0" ]]; then
 	ssh $USER@$HOST "echo \"source ~/teamscripts/bootstrap.sh\" >> ~/.bash_profile"
 fi
 
-echo remove the remote script copies
+echo remove any existing remote script copies
 ssh $USER@$HOST 'rm -rf ~/teamscripts && mkdir ~/teamscripts'
 
 echo redeploy the remote script copies

@@ -1,8 +1,20 @@
 #!/bin/bash
+###################################################################################
+# Install the Team Scripts to the system and make them available on the user path
+# 
+# Usage:
+# 	execute this script from the command line
+# 	tm.source.open
+###################################################################################
 
-#
-# install the Team Scripts to the system and make them available on the user path
-#
+if [ "?" = "$1" ]; then
+	echo "teamscripts.install : Install the Team Scripts to the system and make them available on the user path"
+	echo "    Usage: execute this script from the command line"
+	echo "		  cd/team-scripts"
+	echo "        ./teamscripts.install"
+	exit 0
+fi
+
 
 # check for existing directory
 if [ -d ~/bin/teamscripts ]; then

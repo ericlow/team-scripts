@@ -1,13 +1,11 @@
 # Team Scripts
 `Team Scripts` addresses the problem that many teams have, that sharing scripts can be problematic, from issues with moving bulk groups of scripts, to keeping them organized.
 
-You can run the scripts from anywhere on the command line, because the install scripts writes the location of the scripts to your PATH.
+You can run the scripts from anywhere on the command line. The installation puts the scripts on the PATH.
 
-The terminal's tab complete will write out or list the available commands
+Tab complete lists the available commands
 
 The scripts are organized by namespace / team.
-
-The name of the scripts does not give away the implementation.
 
 The naming scheme of scripts is important:
 

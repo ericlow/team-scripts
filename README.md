@@ -5,7 +5,7 @@ You can run the scripts from anywhere on the command line. The installation puts
 
 Tab complete lists the available commands
 
-The scripts are organized by namespace / team.
+The scripts are organized by namespace / team
 
 The naming scheme of scripts is important:
 

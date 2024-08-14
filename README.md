@@ -1,6 +1,8 @@
 # Team Scripts
 `Team Scripts` helps teams share, collect, organize, and discover knowledge in their engineering organization. 
 
+Scripts are executable knowledge and know how of an engineering organization.
+
 #### Convenience
 You can run the scripts from anywhere on the command line. The installation puts the scripts on the PATH.
 
